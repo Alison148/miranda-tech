@@ -8,34 +8,58 @@
   <!-- Font Awesome e Bootstrap -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
     .hero {
       background: linear-gradient(135deg, #198754, #157347);
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
+
     .hero h1 {
       font-size: 3rem;
       font-weight: bold;
     }
+
     .feature-box {
       border-radius: 12px;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
+
     .feature-box:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     }
+
     .btn-orcamento {
       font-size: 1.2rem;
-      padding: 12px 30px;
+      padding: 14px 32px;
+      box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
     }
+
+    .btn-orcamento:hover {
+      background-color: #146c43;
+    }
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 999;
+    }
+
+    footer .fab {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    footer .fab:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -43,7 +67,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand fw-bold" href="index.html">
       <i class="fas fa-cogs me-2"></i> HelpTech Antunes
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -67,9 +91,9 @@
     </div>
   </section>
 
-  <!-- Seção de Conteúdo -->
+  <!-- Conteúdo Principal -->
   <section class="container py-5">
-    <div class="row mb-4">
+    <div class="row mb-5">
       <div class="col-md-12 text-center">
         <p class="fs-5">
           A <strong>HelpTech Antunes</strong>, localizada em <strong>Jundiaí/SP</strong>, atua há 2 anos oferecendo serviços de <strong>design gráfico</strong>, <strong>assistência técnica</strong> e <strong>impressões profissionais</strong>.
@@ -82,32 +106,32 @@
 
     <!-- Diferenciais -->
     <div class="row text-center g-4">
-      <div class="col-md-3">
-        <div class="bg-light p-4 shadow-sm feature-box">
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white p-4 shadow-sm feature-box h-100">
           <i class="fas fa-laptop-code fa-2x text-success mb-3"></i>
           <h5 class="fw-bold">Assistência Técnica</h5>
           <p class="text-muted">Manutenção de notebooks, celulares e PCs com diagnóstico rápido e preço justo.</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="bg-light p-4 shadow-sm feature-box">
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white p-4 shadow-sm feature-box h-100">
           <i class="fas fa-paint-brush fa-2x text-success mb-3"></i>
           <h5 class="fw-bold">Design Criativo</h5>
-          <p class="text-muted">Criação de artes visuais para divulgação, redes sociais e impressos personalizados.</p>
+          <p class="text-muted">Criação de artes para redes sociais, impressos e campanhas com visual moderno.</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="bg-light p-4 shadow-sm feature-box">
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white p-4 shadow-sm feature-box h-100">
           <i class="fas fa-print fa-2x text-success mb-3"></i>
           <h5 class="fw-bold">Impressão Rápida</h5>
-          <p class="text-muted">Impressões, adesivos, panfletos, cartões de visita, encadernações e plastificações.</p>
+          <p class="text-muted">Adesivos, panfletos, cartões, encadernações e plastificações com ótimo acabamento.</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="bg-light p-4 shadow-sm feature-box">
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white p-4 shadow-sm feature-box h-100">
           <i class="fas fa-user-friends fa-2x text-success mb-3"></i>
           <h5 class="fw-bold">Atendimento Personalizado</h5>
-          <p class="text-muted">A gente escuta o cliente de verdade. Orçamento transparente e solução ágil.</p>
+          <p class="text-muted">Escutamos você de verdade. Atendimento humano, orçamento claro e agilidade.</p>
         </div>
       </div>
     </div>
@@ -122,12 +146,15 @@
   </section>
 
   <!-- Rodapé -->
-  <footer class="bg-dark text-light text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 HelpTech Antunes </p>
-    <p class="mb-0">Atendimento: Segunda a Sexta, das 9h às 18h</p>
-    <div class="mt-2">
-
-      </a>
+  <footer class="bg-dark text-light text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 HelpTech Antunes</p>
+      <p class="mb-1">Atendimento: Segunda a Sexta, das 9h às 18h</p>
+      <div class="mt-2">
+        <a href="https://facebook.com/helptechantunes" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/helptechantunes" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5511957805217" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </footer>
 

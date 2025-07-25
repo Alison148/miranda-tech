@@ -16,7 +16,7 @@
     .hero-contato {
       background: linear-gradient(135deg, #198754, #157347);
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
@@ -25,18 +25,16 @@
       font-weight: bold;
     }
 
-    .form-container {
+    .form-container, .info-box {
       background-color: white;
-      padding: 30px;
+      padding: 35px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
-    .info-box {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .form-control:focus {
+      border-color: #198754;
+      box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
     }
 
     .whatsapp-float {
@@ -45,13 +43,22 @@
       right: 20px;
       z-index: 999;
     }
+
+    footer {
+      font-size: 0.9rem;
+    }
+
+    .form-label i {
+      margin-right: 6px;
+      color: #198754;
+    }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand fw-bold" href="index.html">
       <i class="fas fa-cogs me-2"></i> HelpTech Antunes
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -62,7 +69,7 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="contato.html">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -82,21 +89,19 @@
       <!-- Informações -->
       <div class="col-lg-5">
         <div class="info-box">
-          <h4 class="text-success mb-3"><i class="fas fa-phone-alt me-2"></i>Contato Rápido</h4>
+          <h4 class="text-success mb-3"><i class="fas fa-phone-alt me-2"></i> Contato Rápido</h4>
           <p><i class="fas fa-map-marker-alt me-2 text-danger"></i> Avenida Luís Pereira dos Santos, 556 - Jundiaí/SP</p>
           <p><i class="fab fa-whatsapp me-2 text-success"></i>
-            <a href="https://wa.me/5511957805217?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" class="text-decoration-none">+55 11 95780-5217</a>
-          </p>
- 
+            <a href="https://wa.me/5511957805217?text=Olá!%20Gostaria%20de%20um%20orçamento." target="_blank" class="text-decoration-none text-dark fw-semibold">+55 11 95780-5217</a>
           </p>
 
           <hr class="my-4">
 
-          <h5 class="text-success mb-3"><i class="fas fa-map me-2"></i>Como Chegar</h5>
+          <h5 class="text-success mb-3"><i class="fas fa-map me-2"></i> Como Chegar</h5>
           <div class="ratio ratio-16x9 rounded-3 shadow-sm">
             <iframe
               src="https://www.google.com/maps?q=Avenida+Lu%C3%ADs+Pereira+dos+Santos,+556,+Jundia%C3%AD+-+SP&output=embed"
-              allowfullscreen loading="lazy"></iframe>
+              allowfullscreen loading="lazy" style="border:0;"></iframe>
           </div>
         </div>
       </div>
@@ -104,31 +109,31 @@
       <!-- Formulário -->
       <div class="col-lg-7">
         <div class="form-container">
-          <h4 class="text-success mb-4"><i class="fas fa-file-signature me-2"></i>Solicite um Orçamento</h4>
+          <h4 class="text-success mb-4"><i class="fas fa-file-signature me-2"></i> Solicite um Orçamento</h4>
           <form action="https://formspree.io/f/xzbllkvd" method="POST">
 
             <div class="mb-3">
-              <label class="form-label">Nome:</label>
+              <label class="form-label"><i class="fas fa-user"></i> Nome:</label>
               <input type="text" name="nome" class="form-control" placeholder="Seu nome" required />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">E-mail:</label>
+              <label class="form-label"><i class="fas fa-envelope"></i> E-mail:</label>
               <input type="email" name="email" class="form-control" placeholder="Seu e-mail" required />
             </div>
 
             <div class="mb-3">
-              <label class="form-label">Telefone:</label>
+              <label class="form-label"><i class="fas fa-phone"></i> Telefone:</label>
               <input type="tel" name="telefone" class="form-control" placeholder="(DDD) 90000-0000" />
             </div>
 
             <div class="mb-4">
-              <label class="form-label">Mensagem:</label>
+              <label class="form-label"><i class="fas fa-comment-dots"></i> Mensagem:</label>
               <textarea name="mensagem" class="form-control" rows="5" placeholder="Descreva o serviço desejado" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-success w-100 py-2">
-              <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+              <i class="fas fa-paper-plane me-2"></i> Enviar Mensagem
             </button>
           </form>
         </div>
@@ -138,10 +143,9 @@
 
   <!-- Rodapé -->
   <footer class="bg-dark text-light text-center py-4 mt-5">
-    <p class="mb-1">&copy; 2025 HelpTech Antunes | Todos os direitos reservados</p>
-    <p class="mb-2">Atendimento: Segunda a Sexta, das 9h às 18h</p>
-    <div>
-
+    <div class="container">
+      <p class="mb-1">&copy; 2025 <strong>HelpTech Antunes</strong> | Todos os direitos reservados</p>
+      <p class="mb-0">Atendimento: <strong>Segunda a Sexta, das 9h às 18h</strong></p>
     </div>
   </footer>
 
