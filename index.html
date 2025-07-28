@@ -2,137 +2,125 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HelpTech Antunes - Início</title>
-
-  <!-- Font Awesome e Bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpTech Antunes - Assistência Técnica</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
+    header {
+      background: linear-gradient(135deg, #d62976, #962fbf, #4f5bd5);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
     }
 
-    .hero-title {
-      font-size: 3rem;
+    header h1 {
       font-weight: bold;
+      font-size: 2.8rem;
     }
 
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: #6c757d;
+    header p {
+      font-size: 1.2rem;
     }
 
-    header.bg-light {
-      background: linear-gradient(135deg, #e9f5ee, #f8f9fa);
+    .section {
+      padding: 60px 20px;
     }
 
-    main p.fs-5 {
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.7;
+    .footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px 0;
     }
 
-    footer a {
+    .footer a {
+      color: #fff;
       text-decoration: none;
     }
 
-    footer .fab {
-      transition: transform 0.2s;
-      font-size: 1.25rem;
+    .footer a:hover {
+      text-decoration: underline;
     }
 
-    footer .fab:hover {
-      transform: scale(1.2);
-    }
-
-    .social-icons a {
-      color: #f8f9fa;
-      margin: 0 10px;
-    }
-
-    .btn-success {
-      box-shadow: 0 4px 8px rgba(25, 135, 84, 0.2);
-    }
-
-    .btn-success:hover {
-      background-color: #146c43;
+    .qr-code {
+      width: 160px;
+      margin: 10px auto;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    <a class="navbar-brand fw-bold" href="#">
-      <i class="fas fa-cogs me-2"></i> HelpTech Antunes
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- HEADER DESTAQUE -->
-  <header class="bg-light text-center py-5">
-    <div class="container">
-      <h1 class="text-success hero-title"><i class="fas fa-wrench me-2"></i>HelpTech Antunes</h1>
-      <p class="hero-subtitle">Assistência Técnica de Confiança em Jundiaí/SP</p>
-      <p class="text-muted mt-3">Fundada por <strong>Alison Antunes Miranda</strong>, com mais de 2 anos de experiência no setor técnico e de impressão.</p>
-      <a href="servicos.html" class="btn btn-success btn-lg mt-4">
-        <i class="fas fa-arrow-right me-2"></i> Conheça nossos serviços
-      </a>
-    </div>
+  <!-- Cabeçalho -->
+  <header>
+    <h1><i class="fas fa-tools me-2"></i> HelpTech Antunes</h1>
+    <p>Consertos com qualidade, confiança e rapidez.</p>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-10 text-center">
-        <h2 class="text-primary mb-4"><i class="fas fa-handshake me-2"></i>Bem-vindo à HelpTech Antunes!</h2>
-        <p class="fs-5">
-          Oferecemos soluções completas em manutenção técnica, informática, impressão, encadernação, criação de sites, consultoria e muito mais. 
-          Com compromisso, agilidade e preço justo, somos referência em Jundiaí e região.
-        </p>
+  <!-- Sobre a Empresa -->
+  <section class="section bg-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Nossa História</h2>
+      <p class="lead">
+        A HelpTech Antunes nasceu da paixão por tecnologia e pelo desejo de ajudar as pessoas a resolverem problemas técnicos de forma rápida, eficiente e acessível. Com anos de experiência em manutenção de celulares, computadores, notebooks e outros eletrônicos, nossa missão é oferecer um atendimento honesto, transparente e com foco total na satisfação do cliente.
+      </p>
+      <p>
+        Orgulhosamente atendemos centenas de clientes, sempre com dedicação, comprometimento e qualidade nos serviços prestados. Somos a solução ideal para quem precisa de confiança e resultado na hora de arrumar seus equipamentos!
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section text-center bg-light">
+    <div class="container">
+      <h2 class="mb-4">Nossos Serviços</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+          <h5>Conserto de Celulares</h5>
+          <p>Troca de tela, bateria, conector e manutenção completa.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-laptop fa-3x text-success mb-3"></i>
+          <h5>Computadores e Notebooks</h5>
+          <p>Formatamos, trocamos peças e otimizamos seu equipamento.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-microchip fa-3x text-danger mb-3"></i>
+          <h5>Outros Equipamentos</h5>
+          <p>Assistência técnica em impressoras, roteadores e mais.</p>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- RODAPÉ -->
-  <footer class="bg-dark text-light text-center py-4 mt-5">
+  <!-- Contato -->
+  <section class="section text-center">
     <div class="container">
-      <p class="mb-1">&copy; 2025 <strong>HelpTech Antunes</strong> | Todos os direitos reservados</p>
-      <p class="mb-1">Atendimento: <strong>Segunda a Sexta, das 9h às 18h</strong></p>
-      <p class="mb-3">Desenvolvido por <strong>Alison Antunes Miranda</strong></p>
-      <div class="social-icons d-flex justify-content-center">
-        <a href="https://facebook.com/helptechantunes" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/helptechantunes" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/5511957805217" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <h2 class="mb-4">Fale Conosco</h2>
+      <p class="mb-3"><i class="fab fa-instagram text-danger me-2"></i> Instagram: <strong>@helptech_antunes</strong></p>
+      <p class="mb-3"><i class="fas fa-envelope text-primary me-2"></i> E-mail: <a href="mailto:antuneshelptech6@gmail.com">antuneshelptech6@gmail.com</a></p>
+      <p class="mb-3"><i class="fab fa-whatsapp text-success me-2"></i> WhatsApp: <a href="https://wa.me/5511957805217" target="_blank">+55 11 95780-5217</a></p>
+
+      <!-- QR Code -->
+      <div class="qr-code">
+        <img src="b8b3691d-a794-4dfb-b936-f2ea871ffbc3.png" alt="QR Code Instagram" class="img-fluid" />
+        <p class="mt-2 small">Siga no Instagram escaneando o QR Code!</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2025 HelpTech Antunes. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a class="whatsapp-float" href="https://wa.me/5511957805217" target="_blank" title="Fale conosco no WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" />
-  </a>
-
-  <!-- Script Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
