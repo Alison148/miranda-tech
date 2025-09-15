@@ -321,3 +321,5 @@ footer p{ margin: 6px 0; }
 .mt-3{ margin-top: var(--sp-3) !important; }
 .mt-4{ margin-top: var(--sp-4) !important; }
 .mt-5{ margin-top: var(--sp-5) !important; }
+.mb-0{ margin-bottom: 0 !important; }
+.mb-1{ margin-bottom: var(--sp-1) !important; } 
